@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Sujoy Datta. Copyright (c) 2018. All rights reserved.
+  ~
+  ~ To the person who is reading this..
+  ~ When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
+  ~ P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assignmentOne">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+    <TextView
+        android:id="@+id/tv_contact_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/progressBar"
+        android:hint="@string/default_text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:paddingLeft="5dp"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_assignment_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="217dp"
+        android:background="@android:color/black"
+        android:text="Start!"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</RelativeLayout>
