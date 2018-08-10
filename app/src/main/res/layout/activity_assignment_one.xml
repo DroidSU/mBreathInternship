@@ -18,23 +18,24 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:indeterminate="true"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
-    <TextView
-        android:id="@+id/tv_contact_details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@+id/progressBar"
-        android:hint="@string/default_text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:paddingLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_contact_details_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/default_text"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
     </ScrollView>
 
     <Button
@@ -48,4 +49,62 @@
         android:text="Start!"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_addFirstContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="156dp"
+        android:layout_marginLeft="20dp"
+        android:text="Add contact one"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/btn_addSecondContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btn_addFirstContact"
+        android:text="Add contact two"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/btn_addThirdContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="82dp"
+        android:text="Add contact three"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/btn_addFourthContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btn_addThirdContact"
+        android:text="Add contact four"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
