@@ -10,6 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".assignmentOne">
 
     <ProgressBar
@@ -35,7 +36,7 @@
             android:hint="@string/default_text"
             android:paddingLeft="5dp"
             android:textColor="@color/colorAccent"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
     </ScrollView>
 
     <Button
@@ -106,5 +107,17 @@
         android:layout_marginEnd="20dp"
         android:padding="5dp"
         android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_to_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:text="Locate in maps!"
         android:textColor="@android:color/white" />
 </RelativeLayout>

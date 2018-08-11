@@ -1,4 +1,17 @@
+<!--
+  ~ Created by Sujoy Datta. Copyright (c) 2018. All rights reserved.
+  ~
+  ~ To the person who is reading this..
+  ~ When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
+  ~ P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
+  -->
+
 <resources>
     <string name="app_name">mBreath Internship</string>
     <string name="default_text">Nothing to see yet!</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="temperature_desc">Temperature Graph</string>
+    <string name="light_desc">Light Graph</string>
+    <string name="pressure_desc">Pressure Graph</string>
+    <string name="humidity_desc">Humidity Graph</string>
 </resources>

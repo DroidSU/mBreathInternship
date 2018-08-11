@@ -23,15 +23,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class assignmentOne extends AppCompatActivity {
 
-    private TextView contactListOne;
+    ArrayList<String> latitudes = new ArrayList<>();
     private Button btnStart;
     private Button btnContactOne, btnContactTwo, btnContactThree, btnContactFour;
     private ProgressBar progressBar;
     private boolean isContactDownloaded = false;
-
+    ArrayList<String> longitudes = new ArrayList<>();
+    private TextView contactList;
+    private Button btnMaps;
+    private Contact contact;
     String res_contacts;
 
     @Override
@@ -39,9 +43,10 @@ public class assignmentOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignment_one);
 
-        contactListOne = findViewById(R.id.tv_contact_details_one);
+        contactList = findViewById(R.id.tv_contact_details_one);
         btnStart = findViewById(R.id.btn_assignment_start);
         progressBar = findViewById(R.id.progressBar);
+        btnMaps = findViewById(R.id.btn_to_maps);
         btnContactOne = findViewById(R.id.btn_addFirstContact);
         btnContactTwo = findViewById(R.id.btn_addSecondContact);
         btnContactThree = findViewById(R.id.btn_addThirdContact);
@@ -80,6 +85,27 @@ public class assignmentOne extends AppCompatActivity {
                 addContactFour();
             }
         });
+
+        btnMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMapsActivity();
+            }
+        });
+    }
+
+    private void openMapsActivity() {
+        if (isContactDownloaded) {
+
+            //its a headache to send a serialize object as arraylist, send the whole string instead
+            Intent mapIntent = new Intent(assignmentOne.this, MapsActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("Resultant string", res_contacts);
+            mapIntent.putExtra("Bundle", bundle);
+            startActivity(mapIntent);
+        } else {
+            Toast.makeText(this, "Download the contact list first!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void addContactFour() {
@@ -156,7 +182,7 @@ public class assignmentOne extends AppCompatActivity {
         DownloadTask downloadTask = new DownloadTask();
         try {
             res_contacts = downloadTask.execute("http://www.cs.columbia.edu/~coms6998-8/assignments/homework2/contacts/contacts.txt").get();
-            contactListOne.setText(res_contacts);
+            contactList.setText(res_contacts);
             progressBar.setVisibility(View.INVISIBLE);
         } catch (Exception e) {
             String message = e.getMessage();
